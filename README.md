@@ -1,7 +1,8 @@
 ````markdown
 # React Image Comparison Slider
 
-Welcome to the React Image Comparison Slider project! This is a customizable and responsive React component that enables users to compare two images using a draggable slider.
+Welcome to the React Image Comparison Slider project! 
+This is a customizable and responsive React component that enables users to compare two images using a draggable slider.
 
 ## Features
 
