@@ -1,46 +1,93 @@
-# Getting Started with Create React App
+To include the `npm start` command in the README file, you can add a section for "Development" or "Getting Started" that explains how to start the project. Here's an updated version of the README file:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+````markdown
+# React Image Comparison Slider
 
-## Available Scripts
+Welcome to the React Image Comparison Slider project! This is a customizable and responsive React component that enables users to compare two images using a draggable slider.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Fully Responsive: The component adapts to various container sizes, ensuring a seamless experience across different devices.
+- Customizable Slider Icon: You can easily replace the default slider icon with your own JSX to match your project's design.
+- Customizable Slider Color: The color of the slider can be customized to seamlessly blend with your project's design.
+- Customizable Initial Slider Position: You have the flexibility to specify the initial position of the slider as a percentage.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Installation
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. Clone the repository:
 
-### `npm test`
+```bash
+git clone https://github.com/AdrianGeorgeM/React-Image-Comparison-Slider.git
+```
+````
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Navigate to the project directory:
 
-### `npm run build`
+```bash
+cd React-Image-Comparison-Slider
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Install the dependencies:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Alternatively, if you're using yarn:
 
-### `npm run eject`
+```bash
+yarn
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Development
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To start the development server and run the React Image Comparison Slider locally, use the following command:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+npm start
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+This will launch the development server and open your application in your default browser. You can then view and test the React Image Comparison Slider.
 
-## Learn More
+## Usage
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Here's a basic example of how to use the React Image Comparison Slider in your application:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```jsx
+import ImageComparisonSlider from './ImageComparisonSlider';
+
+// Inside your component's return statement:
+<ImageComparisonSlider
+	originalImageSrc='/path/to/your/before-image.jpg'
+	upscaledImageSrc='/path/to/your/after-image.jpg'
+	sliderPosition={0.5}
+	sliderColor='#ff0000'
+/>;
+```
+
+## API
+
+You can customize the component using the following props:
+
+| Prop             | Type   | Description                                                    |
+| ---------------- | ------ | -------------------------------------------------------------- |
+| originalImageSrc | string | The source path for the original or "before" image.            |
+| upscaledImageSrc | string | The source path for the upscaled or "after" image.             |
+| sliderPosition   | number | The initial position of the slider, specified as a percentage. |
+| sliderColor      | string | The color of the slider.                                       |
+
+## Contributing
+
+Contributions to this project are welcome! If you have any ideas, enhancements, or bug fixes, feel free to fork the repository, make your changes, and submit a pull request. Your contributions are greatly appreciated.
+
+## License
+
+React Image Comparison Slider is open source and available under the [MIT License](https://opensource.org/licenses/MIT).
+
+---
+
+Please note that the `filter: 'grayscale(100%)'` property has been included in the code snippet solely for the purpose of illustrating the contrast between the "before" and "after" images. However, you are free to remove this property if it does not align with your specific design requirements. Feel free to modify the CSS styling within the `ImageComparisonSlider` component to achieve the desired visual effect that suits your project.
+
+```
+
+```
