@@ -3,10 +3,17 @@ import React, { useState, useRef, TouchEvent } from 'react';
 interface AppProps {
 	originalImageSrc: string;
 	upscaledImageSrc: string;
+	sliderPosition: number;
+	sliderColor: string;
 }
 
-function ImageComparisonSlider({ originalImageSrc, upscaledImageSrc }: AppProps) {
-	const [imageRevealFraction, setImageRevealFraction] = useState(0.5);
+function ImageComparisonSlider({
+	originalImageSrc,
+	upscaledImageSrc,
+	sliderPosition,
+	sliderColor,
+}: AppProps) {
+	const [imageRevealFraction, setImageRevealFraction] = useState(sliderPosition);
 	const imageContainer = useRef<HTMLDivElement>(null);
 
 	const slide = (xPosition: number): void => {
@@ -54,7 +61,7 @@ function ImageComparisonSlider({ originalImageSrc, upscaledImageSrc }: AppProps)
 						filter: 'grayscale(100%)',
 						clipPath: `polygon(0 0, ${imageRevealFraction * 100}% 0, ${
 							imageRevealFraction * 100
-						}%100%, 0% 100%)`,
+						}% 100%, 0% 100%)`,
 					}}
 					src={upscaledImageSrc}
 					alt='Upscaled'
@@ -66,7 +73,15 @@ function ImageComparisonSlider({ originalImageSrc, upscaledImageSrc }: AppProps)
 					className='absolute inset-0 group-hover:opacity-0 group-hover:opacity-100 transition-opacity duration-300 opacity-0'
 				>
 					<div className='relative h-full'>
-						<div className='absolute inset-0 bg-red-400 w-0.5 -ml-px opacity-50'></div>
+						<div
+							className='absolute inset-0'
+							style={{
+								backgroundColor: sliderColor,
+								width: '0.5px',
+								marginLeft: '-1px',
+								opacity: '50',
+							}}
+						></div>
 						<div
 							style={{ touchAction: 'none' }}
 							onMouseDown={handleMouseDown}
@@ -79,7 +94,7 @@ function ImageComparisonSlider({ originalImageSrc, upscaledImageSrc }: AppProps)
 								viewBox='0 0 24 24'
 								strokeWidth={1.5}
 								stroke='currentColor'
-								className='w-6 h-6 text-gray-800 rotate-90 cursor pointer absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'
+								className='w-6 h-6 text-gray-800 rotate-90 cursor-pointer absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'
 							>
 								<path
 									strokeLinecap='round'

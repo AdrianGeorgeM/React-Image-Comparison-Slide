@@ -6,6 +6,8 @@ function App() {
 			<ImageComparisonSlider
 				originalImageSrc='original.jpg'
 				upscaledImageSrc='upscaled.jpg'
+				sliderPosition={0.5}
+				sliderColor='blue'
 			/>
 		</div>
 	);
