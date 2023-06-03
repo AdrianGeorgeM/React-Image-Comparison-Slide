@@ -4,6 +4,10 @@
 Welcome to the React Image Comparison Slider project! 
 This is a customizable and responsive React component that enables users to compare two images using a draggable slider.
 
+https://github.com/AdrianGeorgeM/React-Image-Comparison-Slide/assets/62570164/9f88e9c5-13de-492c-ae91-c33a7fe58741
+
+
+
 ## Features
 
 - Fully Responsive: The component adapts to various container sizes, ensuring a seamless experience across different devices.
