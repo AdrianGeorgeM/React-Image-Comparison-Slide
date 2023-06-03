@@ -16,7 +16,7 @@ This is a customizable and responsive React component that enables users to comp
 1. Clone the repository:
 
 ```bash
-git clone [https://github.com/AdrianGeorgeM/React-Image-Comparison-Slider.git](https://github.com/AdrianGeorgeM/React-Image-Comparison-Slide)
+git clone https://github.com/AdrianGeorgeM/React-Image-Comparison-Slide
 ```
 ````
 
