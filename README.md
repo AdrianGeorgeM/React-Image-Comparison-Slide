@@ -1,5 +1,3 @@
-To include the `npm start` command in the README file, you can add a section for "Development" or "Getting Started" that explains how to start the project. Here's an updated version of the README file:
-
 ````markdown
 # React Image Comparison Slider
 
